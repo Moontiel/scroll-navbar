@@ -1,0 +1,3 @@
+Realizamos un efecto scroll en el header
+el cual consiste en disminuir la altura de este
+en el momento que hacemos escroll en la ventana

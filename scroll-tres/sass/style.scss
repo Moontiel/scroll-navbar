@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+$heightHeader: 70px;
+$heightHeaderScroll: 90px;
+
+/*
+    seccion_name: nos sirve para implementar margenes y espaciados 
+    con el fin de separar el contenedor del body en este caso por
+    ser el ehader implementamos fixed y sus propiedades top, left
+    right y z-index para fijar y posicionar la seccion
+*/
+.section_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: $heightHeader;
+	z-index: 999;
+	transition: height 0.5s;
+
+	/*
+		clase añadida con javascript que aumenta el 
+		height del section_header
+	*/
+	&.js_scroll {
+		background-color: #fff;
+		height: $heightHeaderScroll;
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+	}
+
+	/*
+        container_name: es quien contiene todos los elementos por lo
+		general es a esta que damos width para manejar el responsive
+    */
+	.container_header {
+		width: 90%;
+		margin: 0 auto;
+		/*
+			flexbox_name: por lo general contiene cajas las 
+			cuales manejamos con flexbox para centrar los 
+            elemntos vertical y horizontalemente
+		*/
+		.flexbox_header {
+			display: flex;
+			justify-content: space-around;
+			height: $heightHeader;
+			align-items: center;
+			transition: height 0.5s;
+
+			/*
+				clase añadida con javascript que aumenta el 
+				height del flexbox_header
+			*/
+			&.js_flex_scroll {
+				height: $heightHeaderScroll;
+			}
+
+			.box_iconburger {
+				width: 25px;
+				height: 25px;
+				background-color: crimson;
+			}
+
+			.box_nitlogo {
+				width: 25px;
+				height: 25px;
+				background-color: mediumseagreen;
+			}
+		}
+	}
+}
+
+.section_banner {
+	// margin-top: $heightHeader;
+	width: 100%;
+	height: 300px;
+	background-color: palevioletred;
+}

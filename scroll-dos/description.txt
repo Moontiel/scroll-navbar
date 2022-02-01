@@ -1,0 +1,4 @@
+Realizamos un efecto scroll en el header
+el cual consiste es definir la altura de este
+a 0px y aumentarla en cuanto hacemos scroll en 
+la ventana
