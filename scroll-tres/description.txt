@@ -1,4 +1,0 @@
-Realizamos un efecto scroll en el header
-el cual consiste en aumentar la altura de este
-en el momento que hacemos escroll en la ventana
-y ademas de colocarle color de fondo

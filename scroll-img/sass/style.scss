@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+	variables utilizadas por varias etiquetas
+*/
+$heightHeader: 70px;
+$heightHeaderScroll: 90px;
+
+/*
+    section_name: contenedor definido para implementar
+    margin o padding con el fin de separar las secciones
+    entre si, en este caso implementamos fixed y sus 
+	propiedades top, left right y z-index para fijar y 
+	posicionar la seccion, le definimos un height para 
+	luego crear el efecto scroll con esa propiedad
+*/
+.section_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	display: flex;
+	justify-content: space-around;
+	height: $heightHeader;
+	align-items: center;
+	// background-color: #fff;
+	transition: all 0.3s ease-in-out;
+
+	/*
+		js_scroll_navbar: clase añadida con javascript 
+		que aumenta el height de section_header 
+		generando con esto el efecto scroll
+	*/
+	&.js_scroll_navbar {
+		background-color: #fff;
+		height: $heightHeaderScroll;
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+	}
+
+	/*
+        container_name: es quien contiene todos los elementos por lo
+		general es a esta que damos width para manejar el responsive
+    */
+	.container_header {
+		width: 90%;
+		margin: 0 auto;
+
+		/*
+            flexbox_header: definimos flexbox y su 
+			propiedad justify-content para dar espaciado 
+			a los elementos que este contiene
+        */
+		.flexbox_header {
+			display: flex;
+			justify-content: space-around;
+			// background-color: aqua;
+
+			/*
+				box_nitlogo: aqui iria el nit o logo y 
+				el icon menu burger
+			*/
+			.box_nitlogo {
+				width: 25px;
+				height: 25px;
+				background-color: mediumseagreen;
+			}
+
+			/*
+				navbar_ul: aqui iria el menu de navegacion
+			*/
+			.box_navbar {
+				width: 25px;
+				height: 25px;
+				background-color: crimson;
+			}
+		}
+	}
+}
+
+/*
+	seccion de ejemplo
+*/
+.section_banner {
+	width: 100%;
+	height: 500px;
+
+	img {
+		object-fit: cover;
+		width: inherit;
+		height: inherit;
+	}
+}

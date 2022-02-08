@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Scroll uno</title>
+    <title>Scroll height</title>
     <link rel="stylesheet" href="./sass/style.css">
 </head>
     
@@ -13,31 +13,40 @@
 
 <body>
 
-    <!-- 
-        section_name: se define con la finalidad de manejar
-        los espaciados o margenes entre la sesion y el body
+    <!--  
+        section_name: contenedor de la seccion
     -->
     <header class="section_header">
-        <!-- 
-            container_name: es quien contiene todos los elementos 
-            por lo general es a esta que damos width para manejar 
-            el responsive 
+        <!--  
+            container_name: contenedor encargado
+            del responsive, le definimos un ID
+            para implementar en javascript
         -->
-        <div class="container_header">
-            <!-- 
-                flexbox_name: por lo general es a este 
-                le definimos flexbox para centrar los elementos 
-                vertical y horizontalmente
+        <div class="container_header" id="scroll-navbar">
+            <!--  
+                cotent_flexbox: contenedor definido
+                para implementar flebox
             -->
-            <div class="flexbox_header" id="header_scroll">
-                <div class="box_iconburger"></div>
-
+            <div class="flexbox_header">
+                <!--  
+                    aqui iria el logo o nit y el menu burger
+                -->
                 <div class="box_nitlogo"></div>
+
+                <!--  
+                    aqui iria el menu de navegacion
+                -->
+                <nav class="box_navbar"></nav>
             </div>    
         </div>
     </header>
 
-    <div class="section_banner"></div>
+    <!--  
+        seccion de ejemplo
+    -->
+    <div class="section_banner">
+        <p>Siguiente Seccion</p>
+    </div>
 
 
     <br>
