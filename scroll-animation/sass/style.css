@@ -1,0 +1,121 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/*
+	section_name: contenedor definido con el fin de añadir
+	margenes o espaciados que nos permite separarlo de otros
+	elementos, para este caso definimos flexbox y su propiedad
+	align-items mas una height para alinear los elementos que
+	este contiene de manera vertical
+*/
+.section_name {
+  background-color: #fff;
+  display: flex;
+  height: 90px;
+  align-items: center;
+  /*
+  	s_header_scroll: clase añadida con javascript que 
+  	implementa un position: fixed con sus propiedades
+  	top, eft, right y z-index para fija el header,
+  	tambien reducimos el height y finalmente añadimos
+  	una animacion
+  */
+  /*
+  	container_name: le definimos un width el cual
+  	evita que los elementos que contiene generren
+  	desmaquetos
+  */
+}
+.section_name.js_header_scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: 70px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  -webkit-animation: headerAnimation 0.7s forwards;
+          animation: headerAnimation 0.7s forwards;
+  /*
+  	headerAnimation: inicia trasladando el header -40px
+  	hacia arriba finalizando en 0 generando con esto un
+  	efecto de entrada
+  */
+}
+@-webkit-keyframes headerAnimation {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes headerAnimation {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.section_name .container_name {
+  width: 95%;
+  margin: 0 auto;
+  /*
+  	flexbox_name: definimos flexbox y su propiedad
+  	justify-content para poner en linea los elementos 
+  	que este contiene y separarlos entre si
+  */
+}
+.section_name .container_name .flexbox_name {
+  display: flex;
+  justify-content: space-around;
+  /*
+  	box_nit_logo
+  */
+  /*
+  	tag-nav
+  */
+}
+.section_name .container_name .flexbox_name .box_nit_logo {
+  color: #333;
+}
+.section_name .container_name .flexbox_name nav {
+  /*
+  	tag-ul: definimos flexbox para poner en liene los elementos 
+  	que este contiene
+  */
+}
+.section_name .container_name .flexbox_name nav ul {
+  display: flex;
+  /*
+  	tag-li
+  */
+}
+.section_name .container_name .flexbox_name nav ul li {
+  list-style: none;
+  margin-left: 16px;
+  /*
+  	tag-a
+  */
+}
+.section_name .container_name .flexbox_name nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  background-color: #ff671b;
+  color: #fff;
+  height: 700px;
+}
+
+footer {
+  background-color: dodgerblue;
+  color: #fff;
+  height: 400px;
+}/*# sourceMappingURL=style.css.map */
